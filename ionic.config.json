@@ -1,0 +1,7 @@
+{
+  "name": "trivia-jesuitas-ec",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
