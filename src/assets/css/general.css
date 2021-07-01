@@ -29,7 +29,7 @@ body, ion-router-outlet {
     background-color: var(--color-secondary);
     border-radius: 50px;
     box-shadow: 0px 0px 30px #00000060;
-    margin: 1%;
+    margin: 20px;
     box-sizing: border-box;
 }
 ion-content{
