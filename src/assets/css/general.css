@@ -29,7 +29,7 @@ body, ion-router-outlet {
     background-color: var(--color-secondary);
     border-radius: 50px;
     box-shadow: 0px 0px 30px #00000060;
-    margin: 5%;
+    margin: 1%;
     box-sizing: border-box;
 }
 ion-content{
@@ -82,7 +82,7 @@ div#footer {
     font-family: '3Dventure';
     color: #8982ef;
     text-shadow: 2px 2px white, -2px -2px white, -4px 0px white, 2px 0px white, 0px -4px white, 0px 2px white, -4px -4px white;
-    font-size: 23pt;
+    font-size: 40pt;
     letter-spacing: 5pt;
     padding:30px
 }
