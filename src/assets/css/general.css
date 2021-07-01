@@ -55,14 +55,13 @@ div#game-start {
     font-size: 26pt;
     line-height: 1.5;
 }
-#index{max-width: 1300px;min-width: 400px;}
+#index, .footer-container{max-width: 1300px;min-width: 400px; margin: 0 auto;}
 div#index {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     place-content: center;
-    margin: 0 auto;
 }
 .game-title {
     text-shadow: 6px 6px #85d0ad;
@@ -71,7 +70,8 @@ div#index {
 .footer-left {
     float: left;
 }
-
+.footer-container{    display: table;
+    width: 100%;}
 div#footer {
     position: absolute;
     bottom: 0;
