@@ -1,5 +1,5 @@
 {
-	"appId": "puce.trivia.ec",
+	"appId": "io.ionic.starter",
 	"appName": "trivia-jesuitas-ec",
 	"webDir": "www",
 	"bundledWebRuntime": false
