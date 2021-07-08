@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-play',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayPage implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
 
+  goHome(){
+    this.resetGame();
+    this.router.navigate(['/home']);
+  }
+
+  resetGame(){
+    
+  }
 }
