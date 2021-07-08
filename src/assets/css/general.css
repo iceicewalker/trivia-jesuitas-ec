@@ -35,8 +35,8 @@ body, ion-router-outlet {
     margin: 20px;
     box-sizing: border-box;
     background: url('../img/bg.gif');
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: center bottom;
 }
 
 ion-content {
