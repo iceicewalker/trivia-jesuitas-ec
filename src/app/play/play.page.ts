@@ -55,7 +55,7 @@ export class PlayPage implements OnInit {
       this.score = Number(this.score) + Number(score);
       this.loadNewQuestion();
     }else{
-      if(this.lives.length > 0){
+      if(this.lives.length > 1){
         console.error("incorrecta :(");
         this.lives.pop();
       }else{
