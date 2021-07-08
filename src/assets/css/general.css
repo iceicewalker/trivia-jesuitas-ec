@@ -34,6 +34,9 @@ body, ion-router-outlet {
     box-shadow: 0px 0px 30px #00000060;
     margin: 20px;
     box-sizing: border-box;
+    background: url('../img/bg.gif');
+    background-size: contain;
+    background-position: center;
 }
 
 ion-content {
@@ -65,7 +68,6 @@ ion-content {
 }
 
 #index, .footer-container {
-    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -78,7 +80,7 @@ ion-content {
 }
 
 #default-character img {
-    width: 90%;
+    width: 100%;
 }
 
 .game-title {
@@ -166,10 +168,15 @@ ion-content {
 
 .game-btn .game-extra {
     display: grid;
-    width: 90%;
+    grid-gap: 15px;
     padding: 10px 0px;
     grid-auto-flow: column;
     text-align: center;
+}
+
+.game-subtitle {
+    font-size: 1.8em;
+    text-shadow: 3px 3px #8b83eb;
 }
 
 @media screen and (max-width: 1024px) {
@@ -195,6 +202,9 @@ ion-content {
     }
     .game-btn .game-extra {
         width: auto;
+    }
+    .ion-page {
+        background-size: cover;
     }
 }
 
