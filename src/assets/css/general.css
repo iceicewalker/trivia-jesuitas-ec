@@ -47,14 +47,14 @@ ion-content {
     overflow: auto;
 }
 
-div#default-character {
+#default-character {
     position: absolute;
     float: left;
     z-index: -1;
     cursor: crosshair;
 }
 
-div#game-start {
+#game-start {
     float: right;
     position: relative;
     z-index: 1;
@@ -66,11 +66,10 @@ div#game-start {
 
 #index, .footer-container {
     max-width: 1300px;
-    min-width: 400px;
     margin: 0 auto;
 }
 
-div#index {
+#index {
     width: 100%;
     height: 100%;
     display: flex;
@@ -96,7 +95,7 @@ div#index {
     width: 100%;
 }
 
-div#footer {
+#footer {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -105,7 +104,7 @@ div#footer {
     font-family: '3Dventure';
     color: #8982ef;
     text-shadow: 2px 2px white, -2px -2px white, -4px 0px white, 2px 0px white, 0px -4px white, 0px 2px white, -4px -4px white;
-    font-size: 40pt;
+    font-size: 3em;
     letter-spacing: 5pt;
     padding: 30px
 }
@@ -171,4 +170,50 @@ div#footer {
     padding: 10px 0px;
     grid-auto-flow: column;
     text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .game-title {
+        font-size: 2em;
+    }
+    .game-subtitle {
+        font-size: 0.5em;
+    }
+    #footer {
+        font-size: 1em
+    }
+    #game-start {
+        width: 100%;
+    }
+    .play-btn {
+        width: 160px;
+        height: 50px;
+    }
+    .game-extra button {
+        width: 130px!important;
+        height: 45px!important
+    }
+    .game-btn .game-extra {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .game-title {
+        font-size: 1em;
+        text-shadow: 3px 3px #85d0ad;
+    }
+    .game-subtitle {
+        font-size: 0.75em;
+    }
+    #footer {
+        font-size: 0.75em
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game-btn .game-extra {
+        width: auto;
+        display: inline-block;
+    }
 }

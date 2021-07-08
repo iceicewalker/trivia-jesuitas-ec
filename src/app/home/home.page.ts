@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as myGlobals from '../global';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  private version = myGlobals.version;
 
   constructor() {}
 

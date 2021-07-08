@@ -8,11 +8,11 @@
         <div class="game-title">Trivia</div>
         <div class="game-subtitle">Para transformar al mundo</div>
         <div class="game-btn">
-          <button class="play-btn" type="button"></button>
+          <button routerLink="/play" class="play-btn" type="button"></button>
           <div class="game-extra">
-            <button class="inst-btn" type="button"></button>
-            <button class="score-btn" type="button"></button>
-            <button class="credits-btn" type="button"></button> 
+            <button routerLink="/instructions" class="inst-btn" type="button"></button>
+            <button routerLink="/score" class="score-btn" type="button"></button>
+            <button routerLink="/credits" class="credits-btn" type="button"></button> 
           </div>
         </div>
       </div>
@@ -21,7 +21,7 @@
   <div id="footer">
     <div class="footer-container">
       <div class="footer-left">Jesuitas Ec</div>
-      <div class="footer-right">V. 1.0</div>
+      <div class="footer-right">V. {{version}}</div>
     </div>
   </div>
 </div>
