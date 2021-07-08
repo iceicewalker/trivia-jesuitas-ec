@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "568623508931",
+    "firebase_url": "https://trivia-jesuitas-ec-default-rtdb.firebaseio.com",
+    "project_id": "trivia-jesuitas-ec",
+    "storage_bucket": "trivia-jesuitas-ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568623508931:android:c4b6cb1e2a83b493546176",
+        "android_client_info": {
+          "package_name": "puce.trivia.ec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568623508931-m1jh2h51k319io1blk0th7sn3f8u7rjf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWZ_nQ_ZQwtiANnDC4A8Pi6ubGdM-Kd7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568623508931-m1jh2h51k319io1blk0th7sn3f8u7rjf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
