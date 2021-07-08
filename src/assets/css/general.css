@@ -178,7 +178,11 @@ ion-content {
     font-size: 1.8em;
     text-shadow: 3px 3px #8b83eb;
 }
-
+@media screen and (max-width: 1280px) {
+    .ion-page {
+        background-size: cover;
+    }
+}
 @media screen and (max-width: 1024px) {
     .game-title {
         font-size: 2em;
@@ -202,9 +206,6 @@ ion-content {
     }
     .game-btn .game-extra {
         width: auto;
-    }
-    .ion-page {
-        background-size: cover;
     }
 }
 
