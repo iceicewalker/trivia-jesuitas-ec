@@ -1,24 +1,40 @@
 <div id="body-container">
-  <div id="play">
-    <div class="play-header">
-      <button (click)="goHome()" type="button" class="home-btn"></button>
-      <div id="hp-bar">
-        <div *ngFor="let live of lives" class="heart"></div>
+  <ng-container *ngIf="winner && !loser">
+    <div id="winner">
+      <div class="right-header">
+        <button (click)="goHome()" type="button" class="home-btn"></button>
       </div>
     </div>
-    <div class="play-info mt">
-      ROUNDS: {{round}}/{{maxRound}}
-      SCORE: {{score}}/{{maxScore}}
-    </div>
-    <div class="play-aq mt" *ngIf="actualQuestion">
-      <div class="play-question">
-        {{actualQuestion.pregunta}}
+  </ng-container>
+  <ng-container *ngIf="!winner && loser">
+    <div id="loser">
+      <div class="right-header">
+        <button (click)="goHome()" type="button" class="home-btn"></button>
       </div>
-      <ng-container *ngFor="let answer of actualQuestion.respuestas; let i = index">
-        <div (click)="checkAnswer(answer, actualQuestion.score)" class="play-answer">
-          {{i + 1}}.- {{answer.respuesta}}
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!winner && !loser">
+    <div id="play">
+      <div class="play-header">
+        <button (click)="goHome()" type="button" class="home-btn"></button>
+        <div id="hp-bar">
+          <div *ngFor="let live of lives" class="heart"></div>
         </div>
-      </ng-container>
+      </div>
+      <div class="play-info mt">
+        ROUNDS: {{round}}/{{maxRound}}
+        SCORE: {{score}}/{{maxScore}}
+      </div>
+      <div class="play-aq mt" *ngIf="actualQuestion">
+        <div class="play-question">
+          {{actualQuestion.pregunta}}
+        </div>
+        <ng-container *ngFor="let answer of actualQuestion.respuestas; let i = index">
+          <div (click)="checkAnswer(answer, actualQuestion.score)" class="play-answer">
+            {{i + 1}}.- {{answer.respuesta}}
+          </div>
+        </ng-container>
+      </div>
     </div>
-  </div>
+  </ng-container>
 </div>

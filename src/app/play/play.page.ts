@@ -18,6 +18,8 @@ export class PlayPage implements OnInit {
   private questions: any;
   private actualQuestion: [];
   private statusPlaying: boolean = true;
+  private winner: boolean = false;
+  private loser: boolean = false;
 
   constructor(private router: Router, private triviaService: TriviaService) { }
 
@@ -25,7 +27,6 @@ export class PlayPage implements OnInit {
     this.questions = [];
     this.startGame();
   }
-
   startGame(){
     this.newGame();
     this.loadQuestions();
@@ -34,6 +35,8 @@ export class PlayPage implements OnInit {
     this.score = 0;
     this.round = 0;
     this.lives = [1,2,3,4];
+    this.winner = false;
+    this.loser = false;
   }
   getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -52,11 +55,12 @@ export class PlayPage implements OnInit {
   checkAnswer(answer, score){
     if(answer.correcta){
       if(this.round == 10){
-        console.log("ganaste :)");
+        this.winner = true;
+        this.loser = false;
       }else{
         console.log("Correcta xd");
         this.round = Number(this.round) + 1;
-        this.score = Number(this.score) + Number(score);
+        this.score = Number(Number(this.score) + Number(score));
         this.loadNewQuestion();
       }
     }else{
@@ -64,9 +68,9 @@ export class PlayPage implements OnInit {
         console.error("incorrecta :(");
         this.lives.pop();
       }else{
-        console.log("perdiste");
+        this.winner = false;
+        this.loser = true;
         this.statusPlaying = false;
-        this.resetGame();
       }
     }
   }
