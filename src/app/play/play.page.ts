@@ -11,7 +11,7 @@ import * as myGlobals from '../global';
 export class PlayPage implements OnInit {
   
   private score: Number = 0;
-  private round: Number = 0;
+  private round: Number = 1;
   private lives = [1,2,3,4];
   private maxScore: Number = myGlobals.maxScore;
   private maxRound: Number = myGlobals.maxRound;
@@ -51,14 +51,20 @@ export class PlayPage implements OnInit {
   }
   checkAnswer(answer, score){
     if(answer.correcta){
-      console.log("Correcta xd");
-      this.score = Number(this.score) + Number(score);
-      this.loadNewQuestion();
+      if(this.round == 10){
+        console.log("ganaste :)");
+      }else{
+        console.log("Correcta xd");
+        this.round = Number(this.round) + 1;
+        this.score = Number(this.score) + Number(score);
+        this.loadNewQuestion();
+      }
     }else{
       if(this.lives.length > 1){
         console.error("incorrecta :(");
         this.lives.pop();
       }else{
+        console.log("perdiste");
         this.statusPlaying = false;
         this.resetGame();
       }
