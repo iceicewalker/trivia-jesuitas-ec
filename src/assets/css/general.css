@@ -144,11 +144,7 @@ ion-content {
     background-size: contain;
 }
 
-.game-btn button {
-    outline: none;
-}
-
-button{ cursor:pointer; }
+button{ cursor:pointer; outline:none; }
 
 button:hover {
     opacity: .90;
