@@ -3,10 +3,7 @@
     <div class="play-header">
       <button (click)="goHome()" type="button" class="home-btn"></button>
       <div id="hp-bar">
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
+        <div *ngFor="let live of lives" class="heart"></div>
       </div>
     </div>
     <div class="play-info mt">
@@ -18,7 +15,7 @@
         {{actualQuestion.pregunta}}
       </div>
       <ng-container *ngFor="let answer of actualQuestion.respuestas; let i = index">
-        <div (click)="checkAnswer(actualQuestion, answer)" class="play-answer">
+        <div (click)="checkAnswer(answer, actualQuestion.score)" class="play-answer">
           {{i + 1}}.- {{answer.respuesta}}
         </div>
       </ng-container>

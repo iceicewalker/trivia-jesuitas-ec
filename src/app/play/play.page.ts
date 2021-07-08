@@ -12,10 +12,12 @@ export class PlayPage implements OnInit {
   
   private score: Number = 0;
   private round: Number = 0;
+  private lives = [1,2,3,4];
   private maxScore: Number = myGlobals.maxScore;
   private maxRound: Number = myGlobals.maxRound;
   private questions: any;
   private actualQuestion: [];
+  private statusPlaying: boolean = true;
 
   constructor(private router: Router, private triviaService: TriviaService) { }
 
@@ -25,9 +27,13 @@ export class PlayPage implements OnInit {
   }
 
   startGame(){
+    this.newGame();
+    this.loadQuestions();
+  }
+  newGame(){
     this.score = 0;
     this.round = 0;
-    this.loadQuestions();
+    this.lives = [1,2,3,4];
   }
   getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -43,21 +49,27 @@ export class PlayPage implements OnInit {
   loadNewQuestion(){
     this.actualQuestion = this.questions[this.getRandomInt(0, this.questions.length)];
   }
-  checkAnswer(actualQuestion, answer){
+  checkAnswer(answer, score){
     if(answer.correcta){
       console.log("Correcta xd");
-      this.score = Number(this.score) + 10;
+      this.score = Number(this.score) + Number(score);
       this.loadNewQuestion();
     }else{
-      console.error("incorrecta :(");
+      if(this.lives.length > 0){
+        console.error("incorrecta :(");
+        this.lives.pop();
+      }else{
+        this.statusPlaying = false;
+        this.resetGame();
+      }
     }
   }
   goHome(){
     this.resetGame();
     this.router.navigate(['/home']);
   }
-
   resetGame(){
-
+    this.newGame();
+    this.loadNewQuestion();
   }
 }
