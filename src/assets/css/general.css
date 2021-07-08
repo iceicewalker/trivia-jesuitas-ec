@@ -329,7 +329,9 @@ button:hover {
     }   
     #hp-bar{
         display: inline-flex;
-        text-align: center;}
+        text-align: center;
+        margin-top:15px;
+    }
 }
 
 @media screen and (max-width: 480px) {

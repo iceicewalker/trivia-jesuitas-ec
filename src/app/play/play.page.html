@@ -10,22 +10,18 @@
       </div>
     </div>
     <div class="play-info mt">
-      ROUNDS: 2/10 
-      SCORE: 0/100
+      ROUNDS: {{round}}/{{maxRound}}
+      SCORE: {{score}}/{{maxScore}}
     </div>
-    <div class="play-aq mt">
+    <div class="play-aq mt" *ngIf="actualQuestion">
       <div class="play-question">
-        "Hemos aprendido a volar como los pájaros, a nadar como los peces, pero no ...................................................... M.L.K.
+        {{actualQuestion.pregunta}}
       </div>
-      <div class="play-answer">
-        1.- hemos aprendido el arte de vivir juntos, como hermanos"
-      </div>
-      <div class="play-answer">
-        1.- hemos aprendido el arte de vivir juntos, como hermanos"
-      </div>
-      <div class="play-answer">
-        1.- hemos aprendido el arte de vivir juntos, como hermanos"
-      </div>
+      <ng-container *ngFor="let answer of actualQuestion.respuestas; let i = index">
+        <div (click)="checkAnswer(actualQuestion, answer)" class="play-answer">
+          {{i + 1}}.- {{answer.respuesta}}
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>
