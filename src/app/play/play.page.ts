@@ -43,15 +43,17 @@ export class PlayPage implements OnInit {
     return Math.floor(Math.random() * (max - min)) + min;
   }
   loadQuestions(){
-    this.triviaService.getTrivia().subscribe((sub) => {
-      this.questions = sub.map((question) => {
-        return question.payload.doc.data();
+    this.triviaService.getTrivia().forEach((sub) => {
+      sub.forEach((question) => {
+        this.questions.push(question.data());
       })
       this.loadNewQuestion();
     })
   }
   loadNewQuestion(){
-    this.actualQuestion = this.questions[this.getRandomInt(0, this.questions.length)];
+    var random = this.getRandomInt(0, this.questions.length);
+    this.actualQuestion = this.questions[random];
+    this.questions.splice(random, 1);
   }
   saveScore(img, score){
     Swal.fire({

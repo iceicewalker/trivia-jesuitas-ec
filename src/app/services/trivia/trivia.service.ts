@@ -9,7 +9,7 @@ export class TriviaService {
   constructor(private afs: AngularFirestore) { }
 
   getTrivia(){
-    return this.afs.collection("preguntas").snapshotChanges();
+    return this.afs.collection("preguntas").get();
   }
   saveScore(record){
     this.afs.collection("puntuaciones").add(record);
