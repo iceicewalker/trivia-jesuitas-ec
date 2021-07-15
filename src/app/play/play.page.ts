@@ -75,8 +75,10 @@ export class PlayPage implements OnInit {
       if (result.isConfirmed) {
         Swal.fire('¡Puntaje guardado!', 'La información se ha guardado con éxito, en caso de que tengas una puntuación alta, podrás observarla en la tabla de puntuaciones.', 'success');
         this.newGame();
+        this.router.navigate(['/home']);
       }else{
         this.newGame();
+        this.router.navigate(['/home']);
       }
     })
   }
