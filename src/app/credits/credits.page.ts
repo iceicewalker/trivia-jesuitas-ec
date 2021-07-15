@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as myGlobals from '../global';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-credits',
@@ -10,9 +11,12 @@ export class CreditsPage implements OnInit {
 
   public version = myGlobals.version;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  goHome(){
+    this.router.navigate(['/home']);
+  }
 }
