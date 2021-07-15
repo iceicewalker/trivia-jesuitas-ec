@@ -11,5 +11,8 @@ export class TriviaService {
   getTrivia(){
     return this.afs.collection("preguntas").snapshotChanges();
   }
+  saveScore(record){
+    return this.afs.collection("puntuaciones").add(record);
+  }
 
 }
