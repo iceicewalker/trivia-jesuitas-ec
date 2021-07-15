@@ -8,7 +8,7 @@ import * as myGlobals from '../global';
 })
 export class ScorePage implements OnInit {
 
-  private version = myGlobals.version;
+  public version = myGlobals.version;
   
   constructor() { }
 

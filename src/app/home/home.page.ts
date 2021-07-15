@@ -10,8 +10,7 @@ export class HomePage {
 
   audio = new Audio('../../assets/audio/audio3.wav');
   checkStatus = false;
-
-  private version = myGlobals.version;
+  public version = myGlobals.version;
 
   constructor() {}
 

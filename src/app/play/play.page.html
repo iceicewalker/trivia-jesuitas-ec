@@ -22,15 +22,15 @@
         </div>
       </div>
       <div class="play-info mt">
-        ROUNDS: {{round}}/{{maxRound}}
+        ROUNDS: {{round}}
         SCORE: {{score}}
       </div>
       <div class="play-aq mt" *ngIf="actualQuestion">
         <div class="play-question">
-          {{actualQuestion.pregunta}}
+          {{actualQuestion['pregunta']}}
         </div>
-        <ng-container *ngFor="let answer of actualQuestion.respuestas; let i = index">
-          <div (click)="checkAnswer(answer, actualQuestion.score)" class="play-answer">
+        <ng-container *ngFor="let answer of actualQuestion['respuestas']; let i = index">
+          <div (click)="checkAnswer(answer, actualQuestion['score'])" class="play-answer">
             {{i + 1}}.- {{answer.respuesta}}
           </div>
         </ng-container>

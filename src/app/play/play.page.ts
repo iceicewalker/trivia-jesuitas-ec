@@ -10,16 +10,16 @@ import * as myGlobals from '../global';
 })
 export class PlayPage implements OnInit {
   
-  private score: Number = 0;
-  private round: Number = 1;
-  private lives = [1,2,3,4];
-  private maxScore: Number = myGlobals.maxScore;
-  private maxRound: Number = myGlobals.maxRound;
-  private questions: any;
-  private actualQuestion: [];
-  private statusPlaying: boolean = true;
-  private winner: boolean = false;
-  private loser: boolean = false;
+  public score: Number = 0;
+  public round: Number = 1;
+  public lives = [1,2,3,4];
+  //public maxScore: Number = myGlobals.maxScore;
+  //public maxRound: Number = myGlobals.maxRound;
+  public questions: any;
+  public actualQuestion: [];
+  public statusPlaying: boolean = true;
+  public winner: boolean = false;
+  public loser: boolean = false;
 
   constructor(private router: Router, private triviaService: TriviaService) { }
 
