@@ -315,6 +315,15 @@ button:hover {
     width: 100%;
 }
 
+.play-answer.user-data {
+    display: flex;
+    text-transform: uppercase;
+}
+
+.user-score {
+    margin-left: auto;
+}
+
 @media screen and (max-width: 1280px) {
     .ion-page {
         background-size: cover;

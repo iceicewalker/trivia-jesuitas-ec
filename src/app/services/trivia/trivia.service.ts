@@ -12,7 +12,9 @@ export class TriviaService {
     return this.afs.collection("preguntas").snapshotChanges();
   }
   saveScore(record){
-    return this.afs.collection("puntuaciones").add(record);
+    this.afs.collection("puntuaciones").add(record);
   }
-
+  getLeaderboard(){
+    return this.afs.collection("puntuaciones", (ref) => ref.orderBy('puntaje', 'desc').limit(10)).snapshotChanges();
+  }
 }

@@ -1,11 +1,13 @@
 <div id="body-container">
-  <div id="index">
-    puntuaciones xd
+  <div class="left-header">
+    <button (click)="goHome()" type="button" class="home-btn"></button>
   </div>
-  <div id="footer">
-    <div class="footer-container">
-      <div class="footer-left">Jesuitas Ec</div>
-      <div class="footer-right">V. {{version}}</div>
+  <div class="play-info mt">
+    Top 10 Mejores puntuaciones
+  </div>
+  <div class="play-aq mt">
+    <div class="play-answer user-data" *ngFor="let user of leaderBoard; let i = index">
+      <div class="user-nick">{{ (i+1) }}.- {{user.usuario}}</div><div class="user-score">{{user.puntaje}}</div>
     </div>
   </div>
 </div>
