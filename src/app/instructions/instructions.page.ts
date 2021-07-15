@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as myGlobals from '../global';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class InstructionsPage implements OnInit {
 
-  public version = myGlobals.version;
 
   constructor(private router: Router) { }
 

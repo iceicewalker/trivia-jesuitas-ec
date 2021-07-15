@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as myGlobals from '../global';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,8 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./credits.page.scss'],
 })
 export class CreditsPage implements OnInit {
-
-  public version = myGlobals.version;
 
   constructor(private router: Router) { }
 
