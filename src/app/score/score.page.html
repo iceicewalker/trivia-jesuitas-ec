@@ -7,7 +7,7 @@
   </div>
   <div class="play-aq mt">
     <div class="play-answer user-data" *ngFor="let user of leaderBoard; let i = index">
-      <div class="user-nick">{{ (i+1) }}.- {{user.usuario}}</div><div class="user-score">{{user.puntaje}}</div>
+      <div class="user-nick" *ngIf="user.usuario !== ''">{{ (i+1) }}.- {{user.usuario}}</div><div class="user-nick" *ngIf="user.usuario == ''">{{ (i+1) }}.- Sin nombre</div><div class="user-score">{{user.puntaje}}</div>
     </div>
   </div>
 </div>

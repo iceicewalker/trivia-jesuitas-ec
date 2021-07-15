@@ -27,6 +27,4 @@ export class ScorePage implements OnInit, OnDestroy {
   goHome(){
     this.router.navigate(['/home']);
   }
-  
-
 }

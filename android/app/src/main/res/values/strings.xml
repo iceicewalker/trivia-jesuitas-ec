@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">trivia-jesuitas-ec</string>
+    <string name="app_name">Trivia Para Transformar el Mundo</string>
     <string name="title_activity_main">trivia-jesuitas-ec</string>
     <string name="package_name">puce.trivia.ec</string>
     <string name="custom_url_scheme">puce.trivia.ec</string>
