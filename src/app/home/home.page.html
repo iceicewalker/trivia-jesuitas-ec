@@ -13,6 +13,8 @@
             <button routerLink="/instructions" class="inst-btn" type="button"></button>
             <button routerLink="/score" class="score-btn" type="button"></button>
             <button routerLink="/credits" class="credits-btn" type="button"></button>
+            <ion-icon *ngIf="!checkStatus" (click)='reproducir()' name="volume-high-outline"></ion-icon>
+            <ion-icon *ngIf="checkStatus" (click) ='parar()' name="volume-mute-outline"></ion-icon>
           </div>
         </div>
       </div>
