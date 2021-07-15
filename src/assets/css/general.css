@@ -144,7 +144,10 @@ ion-content {
     background-size: contain;
 }
 
-button{ cursor:pointer; outline:none; }
+button {
+    cursor: pointer;
+    outline: none;
+}
 
 button:hover {
     opacity: .90;
@@ -248,7 +251,7 @@ button:hover {
     margin: 10px;
     margin-bottom: 25px;
     font-weight: bold;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .play-aq .play-answer:hover {
@@ -259,7 +262,6 @@ button:hover {
 .play-aq .play-answer:active {
     background: #5957d1;
     box-shadow: 8px 8px #53ce6c;
-
 }
 
 .play-aq .play-question {
@@ -269,6 +271,7 @@ button:hover {
     padding-right: 5%;
     text-align: justify;
 }
+
 #loser {
     background: url('../img/loss.png');
     width: 100%;
@@ -278,7 +281,7 @@ button:hover {
     background-size: contain;
 }
 
-#winner{
+#winner {
     background: url('../img/win.png');
     width: 100%;
     min-height: 100%;
@@ -287,7 +290,20 @@ button:hover {
     background-size: contain;
 }
 
-.right-header{text-align:right;width:100%;}
+#sound {
+    position: absolute;
+    right: 0;
+    margin-top: 45px;
+    margin-right: 45px;
+    z-index: 2;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.right-header {
+    text-align: right;
+    width: 100%;
+}
 
 @media screen and (max-width: 1280px) {
     .ion-page {
@@ -319,7 +335,7 @@ button:hover {
     .game-btn .game-extra {
         width: auto;
     }
-    .play-info, .play-aq{
+    .play-info, .play-aq {
         padding: 10px;
     }
     .play-info, .play-aq .play-question, .play-aq .play-answer {
@@ -328,10 +344,14 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .heart{width: 42px;
-        height: 55px;}
-    .home-btn{    width: 180px;
-        height: 55px;}
+    .heart {
+        width: 42px;
+        height: 55px;
+    }
+    .home-btn {
+        width: 180px;
+        height: 55px;
+    }
     .game-title {
         font-size: 1em;
         text-shadow: 3px 3px #85d0ad;
@@ -346,18 +366,20 @@ button:hover {
         font-size: 1em;
         padding: 10px;
     }
-    .play-aq{padding: 10px;}
+    .play-aq {
+        padding: 10px;
+    }
     .play-aq .play-question, .play-aq .play-answer {
         font-size: 1em;
     }
     .play-header {
         display: table;
         text-align: center;
-    }   
-    #hp-bar{
+    }
+    #hp-bar {
         display: inline-flex;
         text-align: center;
-        margin-top:15px;
+        margin-top: 15px;
     }
 }
 
