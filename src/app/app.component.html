@@ -1,6 +1,6 @@
 <div id="main-container">
-  <ion-icon id="sound" *ngIf="!checkStatus" (click)='reproducir()' name="volume-high-outline"></ion-icon>
-  <ion-icon id="sound" *ngIf="checkStatus" (click) ='parar()' name="volume-mute-outline"></ion-icon>
+  <ion-icon id="sound" *ngIf="checkStatus" (click)='parar()' name="volume-high-outline"></ion-icon>
+  <ion-icon id="sound" *ngIf="!checkStatus" (click) ='reproducir()' name="volume-mute-outline"></ion-icon>
   <ion-content>
     <ion-router-outlet></ion-router-outlet>
   </ion-content>
